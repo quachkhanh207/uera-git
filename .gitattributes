@@ -1,2 +1,25 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+import contact_manager as cm
+
+while True:
+    print("\n1. Thêm liên hệ")
+    print("2. Hiển thị danh bạ")
+    print("3. Thoát")
+
+    lua_chon = input("Chọn chức năng: ")
+
+    if lua_chon == "1":
+        ten = input("Tên: ")
+        so = input("Số điện thoại: ")
+        email = input("Email: ")
+        cm.them_lien_he(ten, so, email)
+
+    elif lua_chon == "2":
+        cm.hien_thi_danh_ba()
+
+    elif lua_chon == "3":
+        break
+
+    else:
+        print("Lựa chọn không hợp lệ.")
